@@ -11,23 +11,43 @@ class OnBoardingViewController: UIViewController {
     var titleLabel: UILabel!
     var pickerView: UIPickerView!
     var button: UIButton!
-    var pickerData = ["Armenian", "Russian", "English"]
+    var languages: [String] = ["Armenian", "Russian", "English"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         initTitleLabel()
-        initPicker()
+        initPickerView()
         initButton()
         constructHierarchies()
         activateConstraints()
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
         button.addTarget(self, action: #selector(getStarted), for: .touchUpInside)
     }
     
     @objc func getStarted(sender: UIButton) {
+        let languageId = pickerView.selectedRow(inComponent: 0)
         let viewController = AnimalChoosingViewController()
+        viewController.languageId = languageId
+        
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension OnBoardingViewController:UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+        numberOfRowsInComponent component: Int) -> Int {
+        return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return languages[row]
     }
 }
 
@@ -36,18 +56,17 @@ extension OnBoardingViewController {
         titleLabel = UILabel()
         titleLabel.text = "Welcome to the Zoo"
         titleLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func initPicker() {
+    func initPickerView() {
         pickerView = UIPickerView()
         pickerView.translatesAutoresizingMaskIntoConstraints = false
-        pickerView.delegate = self
-        pickerView.dataSource = self
     }
     
     func initButton() {
-        button = UIButton()
+        button = UIButton(type: .system)
         button.backgroundColor = .red
         button.setTitle("Get Started", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -78,25 +97,6 @@ extension OnBoardingViewController {
             button.heightAnchor.constraint(equalToConstant: 50),
             button.widthAnchor.constraint(equalToConstant: 150)
         ])
-    }
-}
-
-extension OnBoardingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(
-        _ pickerView: UIPickerView,
-        titleForRow row: Int,
-        forComponent component: Int
-    ) -> String? {
-        return pickerData[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView,
-        numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
     }
 }
 
