@@ -13,9 +13,9 @@ struct AnimalsData {
     var imageName: String
     
     static var animals: [AnimalsData] = [
-        AnimalsData(id: 1, name: "Mammals", imageName: "mammals"),
-        AnimalsData(id: 2, name: "Birds", imageName: "birds"),
-        AnimalsData(id: 3, name: "Fish", imageName: "fish")
+        AnimalsData(id: 1, name: NSLocalizedString("name1", comment: ""), imageName: "mammals"),
+        AnimalsData(id: 2, name: NSLocalizedString("name2", comment: ""), imageName: "birds"),
+        AnimalsData(id: 3, name: NSLocalizedString("name3", comment: ""), imageName: "fish")
     ]
 }
 
@@ -37,7 +37,6 @@ class AnimalChoosingViewController: BaseViewController {
         createAnimalButtons()
         
         title = NSLocalizedString("animalType_title", comment: "")
-//        label = NSLocalizedString("animals_title", comment: "")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "gear"),
@@ -93,7 +92,7 @@ extension AnimalChoosingViewController: AnimalButtonDelegate {
 extension AnimalChoosingViewController {
     func initStackView() {
         stackView = UIStackView()
-        stackView.spacing = 12
+        stackView.spacing = 10
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -106,10 +105,10 @@ extension AnimalChoosingViewController {
     func activateConstraints() {
         NSLayoutConstraint.activate([
 
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }

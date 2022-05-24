@@ -7,4 +7,6 @@
 */
 
 "animalType_title" = "Animals";
-"animals_title" = "Mammals";
+"name1" = "Mammals";
+"name2" = "Birds";
+"name3" = "Fish";

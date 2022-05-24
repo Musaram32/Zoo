@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D461412B2836B31D00904FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D461412D2836B31D00904FC1 /* Localizable.strings */; };
+		D4967331283903F30006DA5D /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4967330283903F30006DA5D /* AnimalCell.swift */; };
 		D4B76DE72836683E00134B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DE62836683E00134B55 /* AppDelegate.swift */; };
 		D4B76DE92836683E00134B55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DE82836683E00134B55 /* SceneDelegate.swift */; };
 		D4B76DEB2836683E00134B55 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DEA2836683E00134B55 /* OnBoardingViewController.swift */; };
@@ -45,6 +46,7 @@
 		D46141382836B3B400904FC1 /* hy-AM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "hy-AM"; path = "hy-AM.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D461413B2836B43200904FC1 /* hy-AM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "hy-AM"; path = "hy-AM.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D461413C2836B43500904FC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4967330283903F30006DA5D /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		D4B76DE32836683E00134B55 /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B76DE62836683E00134B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4B76DE82836683E00134B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B76E18283671E200134B55 /* AnimalsTableView.swift */,
+				D4967330283903F30006DA5D /* AnimalCell.swift */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				D4B76E17283668F600134B55 /* AnimalChoosingViewController.swift in Sources */,
 				D4B76DEB2836683E00134B55 /* OnBoardingViewController.swift in Sources */,
 				D4B76DE72836683E00134B55 /* AppDelegate.swift in Sources */,
+				D4967331283903F30006DA5D /* AnimalCell.swift in Sources */,
 				D4B76DE92836683E00134B55 /* SceneDelegate.swift in Sources */,
 				D4B76E1B2836766000134B55 /* AnimalsType.swift in Sources */,
 			);

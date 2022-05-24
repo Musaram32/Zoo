@@ -94,13 +94,11 @@ extension AnimalsType {
             
             imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1),
             imageView.heightAnchor.constraint(equalToConstant: 190),
             
-//            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -5),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
