@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Aram Martirosyan on 19.05.22.
+  
+*/
+
+"animalType_title" = "Животные";
+"name1" = "Млекапитаюшие";
+"name2" = "Птицы";
+"name3" = "Рыбы";
