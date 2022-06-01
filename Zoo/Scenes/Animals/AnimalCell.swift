@@ -6,16 +6,39 @@
 //
 
 import UIKit
+
 class AnimalCell: UITableViewCell {
+    
   var animalImageView: UIImageView!
   var name: UILabel!
+  var info: UILabel!
    
-  var data: Animal? {
+  var mammalsData: Mammals? {
     didSet {
-      guard let data = data else { return }
+      guard let data = mammalsData else { return }
       animalImageView.image = UIImage(named: data.imageString)
+        name.text = data.name
+        info.text = data.info
     }
   }
+    
+    var birdsData: Birds? {
+      didSet {
+        guard let data = birdsData else { return }
+        animalImageView.image = UIImage(named: data.imageString)
+          name.text = data.name
+          info.text = data.info
+      }
+    }
+    
+//    var fishesData: Fishes? {
+//      didSet {
+//        guard let data = fishesData else { return }
+//        animalImageView.image = UIImage(named: data.imageString)
+//          name.text = data.name
+//          info.text = data.info
+//      }
+//    }
    
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -29,10 +52,13 @@ class AnimalCell: UITableViewCell {
    
   func commonInit() {
     initImageView()
+    initName()
+    initInfo()
     consructHierarchy()
     activateConstraints()
   }
 }
+
 extension AnimalCell {
   func initImageView() {
     animalImageView = UIImageView()
@@ -42,9 +68,28 @@ extension AnimalCell {
     animalImageView.contentMode = .scaleAspectFill
     animalImageView.translatesAutoresizingMaskIntoConstraints = false
   }
+    
+    func initName() {
+        name = UILabel()
+        name.textAlignment = .center
+        name.textColor = .black
+        name.font = .systemFont(ofSize: 25, weight: .bold)
+        name.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func initInfo() {
+        info = UILabel()
+        info.textAlignment = .center
+        info.textColor = .black
+        info.font = .systemFont(ofSize: 20)
+        info.translatesAutoresizingMaskIntoConstraints = false
+    }
    
   func consructHierarchy() {
     addSubview(animalImageView)
+    addSubview(name)
+    addSubview(info)
+      
      
   }
    
@@ -52,10 +97,15 @@ extension AnimalCell {
     NSLayoutConstraint.activate([
       animalImageView.widthAnchor.constraint(equalToConstant: 100),
       animalImageView.heightAnchor.constraint(equalToConstant: 100),
-       
       animalImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
       animalImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-      animalImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+      animalImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+      
+      name.leadingAnchor.constraint(equalTo: animalImageView.trailingAnchor, constant: 15),
+      name.topAnchor.constraint(equalTo: topAnchor, constant: 25),
+      
+      info.leadingAnchor.constraint(equalTo: animalImageView.trailingAnchor, constant: 15),
+      info.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
     ])
   }
 }

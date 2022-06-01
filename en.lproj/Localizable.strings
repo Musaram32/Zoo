@@ -6,7 +6,9 @@
   
 */
 
-"animalType_title" = "Animals";
+"title" = "Welcome to the Zoo";
+"secondTitle" = "Animals";
 "name1" = "Mammals";
 "name2" = "Birds";
-"name3" = "Fish";
+"name3" = "Fishes";
+"button" = "Get Started";

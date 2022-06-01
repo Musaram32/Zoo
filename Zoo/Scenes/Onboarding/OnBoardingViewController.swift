@@ -34,6 +34,10 @@ class OnBoardingViewController: UIViewController {
         
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    @objc func languageChanged(sender: UIPickerView) {
+        titleLabel.text = NSLocalizedString("title", comment: "")
+    }
 }
 
 extension OnBoardingViewController:UIPickerViewDataSource, UIPickerViewDelegate {
@@ -54,9 +58,10 @@ extension OnBoardingViewController:UIPickerViewDataSource, UIPickerViewDelegate 
 extension OnBoardingViewController {
     func initTitleLabel() {
         titleLabel = UILabel()
-        titleLabel.text = "Welcome to the Zoo"
-        titleLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        titleLabel.text = NSLocalizedString("title", comment: "")
+        titleLabel.font = .systemFont(ofSize: 25, weight: .bold)
         titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -68,7 +73,7 @@ extension OnBoardingViewController {
     func initButton() {
         button = UIButton(type: .system)
         button.backgroundColor = .red
-        button.setTitle("Get Started", for: .normal)
+        button.setTitle(NSLocalizedString("button", comment: ""), for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         button.layer.cornerRadius = 12
@@ -85,7 +90,8 @@ extension OnBoardingViewController {
     func activateConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             pickerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pickerView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 100),

@@ -30,7 +30,7 @@ class AnimalsType: UIView {
     init() {
         super.init(frame: .zero)
         layer.cornerRadius = 15
-        layer.borderWidth = 1
+        layer.borderWidth = 0
         layer.borderColor = UIColor.black.cgColor
         initImageView()
         initButton()
@@ -69,7 +69,7 @@ extension AnimalsType {
         func initTitleLabel() {
             titleLabel = UILabel()
             titleLabel.textColor = .black
-            titleLabel.font = .systemFont(ofSize: 25, weight: .bold)
+            titleLabel.font = .systemFont(ofSize: 22, weight: .bold)
             titleLabel.translatesAutoresizingMaskIntoConstraints = false
         }
     
@@ -94,14 +94,13 @@ extension AnimalsType {
             
             imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1),
             imageView.heightAnchor.constraint(equalToConstant: 190),
             
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -5),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 5),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
         ])
     }
 }

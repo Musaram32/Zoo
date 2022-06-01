@@ -26,17 +26,17 @@ class BaseViewController: UIViewController {
 class AnimalChoosingViewController: BaseViewController {
     
     var stackView: UIStackView!
+    var secondTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         checkLanguage(with: languageId!)
+        initSecondTitle()
         initStackView()
         constructHierarchies()
         activateConstraints()
         createAnimalButtons()
-        
-        title = NSLocalizedString("animalType_title", comment: "")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "gear"),
@@ -84,7 +84,7 @@ class AnimalChoosingViewController: BaseViewController {
 
 extension AnimalChoosingViewController: AnimalButtonDelegate {
     func buttonPressed(id: Int) {
-        let viewController = AnimalsTableView()
+        let viewController = AnimalsTableViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -98,13 +98,25 @@ extension AnimalChoosingViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    func initSecondTitle() {
+        secondTitle = UILabel()
+        secondTitle.text = NSLocalizedString("secondTitle", comment: "")
+        secondTitle.textColor = .black
+        secondTitle.font = .systemFont(ofSize: 25, weight: .bold)
+        secondTitle.textAlignment = .center
+        secondTitle.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func constructHierarchies() {
+        view.addSubview(secondTitle)
         view.addSubview(stackView)
  }
-//
+    
     func activateConstraints() {
         NSLayoutConstraint.activate([
-
+            secondTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: 55),
+            secondTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
