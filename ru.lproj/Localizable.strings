@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Aram Martirosyan on 19.05.22.
+  
+*/
+
+"title" = "Добро пожаловатъ в Зоопарк";
+"secondTitle" = "Животные";
+"name1" = "Млекапитающие";
+"name2" = "Птицы";
+"name3" = "Рыбы";
+"button" = "Начать";

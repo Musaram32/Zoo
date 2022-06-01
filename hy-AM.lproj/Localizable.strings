@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Aram Martirosyan on 19.05.22.
+  
+*/
+
+"title" = "Բարի գալուստ կենդանաբանական այգի";
+"secondTitle" = "Կենդանիներ";
+"name1" = "Կաթնասուններ";
+"name2" = "Թռչուններ";
+"name3" = "Ձկներ";
+"button" = "Սկսել";

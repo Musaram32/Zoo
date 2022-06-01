@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Aram Martirosyan on 19.05.22.
+  
+*/
+
+"title" = "Welcome to the Zoo";
+"secondTitle" = "Animals";
+"name1" = "Mammals";
+"name2" = "Birds";
+"name3" = "Fishes";
+"button" = "Get Started";
