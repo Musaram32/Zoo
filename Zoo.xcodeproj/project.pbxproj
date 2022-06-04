@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D44052552848F67C007A9B28 /* AnimalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44052542848F67C007A9B28 /* AnimalInfoViewController.swift */; };
 		D461412B2836B31D00904FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D461412D2836B31D00904FC1 /* Localizable.strings */; };
 		D4967331283903F30006DA5D /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4967330283903F30006DA5D /* AnimalCell.swift */; };
 		D4B76DE72836683E00134B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DE62836683E00134B55 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D44052542848F67C007A9B28 /* AnimalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfoViewController.swift; sourceTree = "<group>"; };
 		D461412C2836B31D00904FC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D46141372836B39E00904FC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D46141382836B3B400904FC1 /* hy-AM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "hy-AM"; path = "hy-AM.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D44052532848F635007A9B28 /* Animal Info */ = {
+			isa = PBXGroup;
+			children = (
+				D44052542848F67C007A9B28 /* AnimalInfoViewController.swift */,
+			);
+			path = "Animal Info";
+			sourceTree = "<group>";
+		};
 		D4B76DDA2836683E00134B55 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 				D4B7FE292838B88A00F582AD /* Onboarding */,
 				D4B7FE2B2838B8E600F582AD /* Animal Types */,
 				D4B7FE2D2838B99400F582AD /* Animals */,
+				D44052532848F635007A9B28 /* Animal Info */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B76E19283671E200134B55 /* AnimalsTableViewController.swift in Sources */,
+				D44052552848F67C007A9B28 /* AnimalInfoViewController.swift in Sources */,
 				D4B76E17283668F600134B55 /* AnimalChoosingViewController.swift in Sources */,
 				D4B76DEB2836683E00134B55 /* OnBoardingViewController.swift in Sources */,
 				D4B76DE72836683E00134B55 /* AppDelegate.swift in Sources */,

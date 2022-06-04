@@ -31,7 +31,6 @@ class AnimalChoosingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        checkLanguage(with: languageId!)
         initSecondTitle()
         initStackView()
         constructHierarchies()
@@ -90,14 +89,6 @@ extension AnimalChoosingViewController: AnimalButtonDelegate {
 }
 
 extension AnimalChoosingViewController {
-    func initStackView() {
-        stackView = UIStackView()
-        stackView.spacing = 10
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
     func initSecondTitle() {
         secondTitle = UILabel()
         secondTitle.text = NSLocalizedString("secondTitle", comment: "")
@@ -107,9 +98,17 @@ extension AnimalChoosingViewController {
         secondTitle.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    func initStackView() {
+        stackView = UIStackView()
+        stackView.spacing = 10
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func constructHierarchies() {
-        view.addSubview(secondTitle)
         view.addSubview(stackView)
+        view.addSubview(secondTitle)
  }
     
     func activateConstraints() {

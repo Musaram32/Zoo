@@ -23,40 +23,40 @@ struct Mammal {
         mammals.append(
             Mammals(
             imageString: "lion",
-            name: "Lion",
-            info: "The king of jungles"
+            name: NSLocalizedString("mammal1", comment: ""),
+            info: NSLocalizedString("info1", comment: "")
             )
         )
         
         mammals.append(
             Mammals(
             imageString: "tiger",
-            name: "Tiger",
-            info: "Lives in South America"
+            name: NSLocalizedString("mammal2", comment: ""),
+            info: NSLocalizedString("info2", comment: "")
             )
         )
         
         mammals.append(
             Mammals(
             imageString: "wolf",
-            name: "Wolf",
-            info: "Eats chicken"
+            name: NSLocalizedString("mammal3", comment: ""),
+            info: NSLocalizedString("info3", comment: "")
             )
         )
         
         mammals.append(
             Mammals(
             imageString: "fox",
-            name: "Fox",
-            info: "Is cunning"
+            name: NSLocalizedString("mammal4", comment: ""),
+            info: NSLocalizedString("info4", comment: "")
             )
         )
         
         mammals.append(
             Mammals(
             imageString: "elephant",
-            name: "Elephant",
-            info: "Has big ears"
+            name: NSLocalizedString("mammal5", comment: ""),
+            info: NSLocalizedString("info5", comment: "")
             )
         )
         
@@ -64,68 +64,28 @@ struct Mammal {
     }
 }
 
-struct Birds {
-    enum gender {
-        case male
-        case female
-    }
-    var imageString: String
-    var name: String
-    var info: String
-}
-
-struct Bird {
-    static func getAnimals() -> [Birds] {
-        var birds: [Birds] = []
-        birds.append(
-            Birds(
-            imageString: "lion",
-            name: "Colibri",
-            info: "The king of jungles"
-            )
-        )
-        
-        birds.append(
-            Birds(
-            imageString: "tiger",
-            name: "Tiger",
-            info: "Lives in South America"
-            )
-        )
-        
-        birds.append(
-            Birds(
-            imageString: "wolf",
-            name: "Wolf",
-            info: "Eats chicken"
-            )
-        )
-        
-        birds.append(
-            Birds(
-            imageString: "fox",
-            name: "Fox",
-            info: "Is cunning"
-            )
-        )
-        
-        birds.append(
-            Birds(
-            imageString: "elephant",
-            name: "Elephant",
-            info: "Has big ears"
-            )
-        )
-        
-        return birds
-    }
-}
-
 class AnimalsTableViewController: UITableViewController {
+    
+    var thirdTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initThirdTitle()
+        constructHierarchies()
+        activateConstraints()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "gear"),
+            style: .plain,
+            target: self,
+            action: #selector(gearButtonPressed)
+        )
         
         tableView.register(AnimalCell.self, forCellReuseIdentifier: "DefaultCell")
+    }
+    
+    @objc func gearButtonPressed() {
+        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -144,5 +104,36 @@ class AnimalsTableViewController: UITableViewController {
 
         cell.mammalsData = Mammal.getAnimals()[indexPath.row]
         return cell
+    }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        tableView.deselectRow(at: indexPath, animated: true)
+       let viewController = AnimalInfoViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension AnimalsTableViewController {
+    func initThirdTitle() {
+        thirdTitle = UILabel()
+        thirdTitle.text = NSLocalizedString("name1", comment: "")
+        thirdTitle.textAlignment = .center
+        thirdTitle.font = .systemFont(ofSize: 25, weight: .bold)
+        thirdTitle.textColor = .black
+        thirdTitle.translatesAutoresizingMaskIntoConstraints = false
+      }
+    
+    func constructHierarchies() {
+        view.addSubview(thirdTitle)
+    }
+    
+    func activateConstraints() {
+        NSLayoutConstraint.activate([
+            thirdTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -40),
+            thirdTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
     }
 }

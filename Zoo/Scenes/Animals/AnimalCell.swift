@@ -22,24 +22,6 @@ class AnimalCell: UITableViewCell {
     }
   }
     
-    var birdsData: Birds? {
-      didSet {
-        guard let data = birdsData else { return }
-        animalImageView.image = UIImage(named: data.imageString)
-          name.text = data.name
-          info.text = data.info
-      }
-    }
-    
-//    var fishesData: Fishes? {
-//      didSet {
-//        guard let data = fishesData else { return }
-//        animalImageView.image = UIImage(named: data.imageString)
-//          name.text = data.name
-//          info.text = data.info
-//      }
-//    }
-   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     commonInit()
@@ -73,7 +55,7 @@ extension AnimalCell {
         name = UILabel()
         name.textAlignment = .center
         name.textColor = .black
-        name.font = .systemFont(ofSize: 25, weight: .bold)
+        name.font = .systemFont(ofSize: 22, weight: .bold)
         name.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -85,15 +67,13 @@ extension AnimalCell {
         info.translatesAutoresizingMaskIntoConstraints = false
     }
    
-  func consructHierarchy() {
+    func consructHierarchy() {
     addSubview(animalImageView)
     addSubview(name)
     addSubview(info)
-      
-     
-  }
+    }
    
-  func activateConstraints() {
+    func activateConstraints() {
     NSLayoutConstraint.activate([
       animalImageView.widthAnchor.constraint(equalToConstant: 100),
       animalImageView.heightAnchor.constraint(equalToConstant: 100),
@@ -106,9 +86,11 @@ extension AnimalCell {
       
       info.leadingAnchor.constraint(equalTo: animalImageView.trailingAnchor, constant: 15),
       info.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
-    ])
-  }
+      ])
+    }
 }
+
+
 
 
 
