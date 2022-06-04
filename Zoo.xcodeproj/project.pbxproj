@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D44052552848F67C007A9B28 /* AnimalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44052542848F67C007A9B28 /* AnimalInfoViewController.swift */; };
+		D461412B2836B31D00904FC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D461412D2836B31D00904FC1 /* Localizable.strings */; };
+		D4967331283903F30006DA5D /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4967330283903F30006DA5D /* AnimalCell.swift */; };
 		D4B76DE72836683E00134B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DE62836683E00134B55 /* AppDelegate.swift */; };
 		D4B76DE92836683E00134B55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DE82836683E00134B55 /* SceneDelegate.swift */; };
 		D4B76DEB2836683E00134B55 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DEA2836683E00134B55 /* OnBoardingViewController.swift */; };
-		D4B76DEE2836683E00134B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B76DEC2836683E00134B55 /* Main.storyboard */; };
 		D4B76DF02836684000134B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B76DEF2836684000134B55 /* Assets.xcassets */; };
 		D4B76DF32836684000134B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B76DF12836684000134B55 /* LaunchScreen.storyboard */; };
 		D4B76DFE2836684000134B55 /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76DFD2836684000134B55 /* ZooTests.swift */; };
 		D4B76E082836684000134B55 /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76E072836684000134B55 /* ZooUITests.swift */; };
 		D4B76E0A2836684000134B55 /* ZooUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76E092836684000134B55 /* ZooUITestsLaunchTests.swift */; };
 		D4B76E17283668F600134B55 /* AnimalChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76E16283668F600134B55 /* AnimalChoosingViewController.swift */; };
-		D4B76E19283671E200134B55 /* AnimalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76E18283671E200134B55 /* AnimalsTableView.swift */; };
+		D4B76E19283671E200134B55 /* AnimalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76E18283671E200134B55 /* AnimalsTableViewController.swift */; };
 		D4B76E1B2836766000134B55 /* AnimalsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B76E1A2836766000134B55 /* AnimalsType.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D44052542848F67C007A9B28 /* AnimalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfoViewController.swift; sourceTree = "<group>"; };
+		D461412C2836B31D00904FC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D46141372836B39E00904FC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D46141382836B3B400904FC1 /* hy-AM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "hy-AM"; path = "hy-AM.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D461413B2836B43200904FC1 /* hy-AM */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "hy-AM"; path = "hy-AM.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D461413C2836B43500904FC1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4967330283903F30006DA5D /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		D4B76DE32836683E00134B55 /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B76DE62836683E00134B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4B76DE82836683E00134B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4B76DEA2836683E00134B55 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		D4B76DED2836683E00134B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4B76DEF2836684000134B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4B76DF22836684000134B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4B76DF42836684000134B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +61,7 @@
 		D4B76E072836684000134B55 /* ZooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITests.swift; sourceTree = "<group>"; };
 		D4B76E092836684000134B55 /* ZooUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4B76E16283668F600134B55 /* AnimalChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoosingViewController.swift; sourceTree = "<group>"; };
-		D4B76E18283671E200134B55 /* AnimalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableView.swift; sourceTree = "<group>"; };
+		D4B76E18283671E200134B55 /* AnimalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewController.swift; sourceTree = "<group>"; };
 		D4B76E1A2836766000134B55 /* AnimalsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,10 +90,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D44052532848F635007A9B28 /* Animal Info */ = {
+			isa = PBXGroup;
+			children = (
+				D44052542848F67C007A9B28 /* AnimalInfoViewController.swift */,
+			);
+			path = "Animal Info";
+			sourceTree = "<group>";
+		};
 		D4B76DDA2836683E00134B55 = {
 			isa = PBXGroup;
 			children = (
-				D4B76E18283671E200134B55 /* AnimalsTableView.swift */,
+				D461412D2836B31D00904FC1 /* Localizable.strings */,
 				D4B76DE52836683E00134B55 /* Zoo */,
 				D4B76DFC2836684000134B55 /* ZooTests */,
 				D4B76E062836684000134B55 /* ZooUITests */,
@@ -108,10 +124,7 @@
 			children = (
 				D4B76DE62836683E00134B55 /* AppDelegate.swift */,
 				D4B76DE82836683E00134B55 /* SceneDelegate.swift */,
-				D4B76DEA2836683E00134B55 /* OnBoardingViewController.swift */,
-				D4B76E16283668F600134B55 /* AnimalChoosingViewController.swift */,
-				D4B76E1A2836766000134B55 /* AnimalsType.swift */,
-				D4B76DEC2836683E00134B55 /* Main.storyboard */,
+				D4B7FE2A2838B8B900F582AD /* Scenes */,
 				D4B76DEF2836684000134B55 /* Assets.xcassets */,
 				D4B76DF12836684000134B55 /* LaunchScreen.storyboard */,
 				D4B76DF42836684000134B55 /* Info.plist */,
@@ -134,6 +147,51 @@
 				D4B76E092836684000134B55 /* ZooUITestsLaunchTests.swift */,
 			);
 			path = ZooUITests;
+			sourceTree = "<group>";
+		};
+		D4B7FE292838B88A00F582AD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D4B76DEA2836683E00134B55 /* OnBoardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D4B7FE2A2838B8B900F582AD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D4B7FE292838B88A00F582AD /* Onboarding */,
+				D4B7FE2B2838B8E600F582AD /* Animal Types */,
+				D4B7FE2D2838B99400F582AD /* Animals */,
+				D44052532848F635007A9B28 /* Animal Info */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D4B7FE2B2838B8E600F582AD /* Animal Types */ = {
+			isa = PBXGroup;
+			children = (
+				D4B76E16283668F600134B55 /* AnimalChoosingViewController.swift */,
+				D4B7FE2C2838B93100F582AD /* Views */,
+			);
+			path = "Animal Types";
+			sourceTree = "<group>";
+		};
+		D4B7FE2C2838B93100F582AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4B76E1A2836766000134B55 /* AnimalsType.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4B7FE2D2838B99400F582AD /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				D4B76E18283671E200134B55 /* AnimalsTableViewController.swift */,
+				D4967330283903F30006DA5D /* AnimalCell.swift */,
+			);
+			path = Animals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +280,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				"hy-AM",
 			);
 			mainGroup = D4B76DDA2836683E00134B55;
 			productRefGroup = D4B76DE42836683E00134B55 /* Products */;
@@ -241,8 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B76DF32836684000134B55 /* LaunchScreen.storyboard in Resources */,
+				D461412B2836B31D00904FC1 /* Localizable.strings in Resources */,
 				D4B76DF02836684000134B55 /* Assets.xcassets in Resources */,
-				D4B76DEE2836683E00134B55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B76E19283671E200134B55 /* AnimalsTableView.swift in Sources */,
+				D4B76E19283671E200134B55 /* AnimalsTableViewController.swift in Sources */,
+				D44052552848F67C007A9B28 /* AnimalInfoViewController.swift in Sources */,
 				D4B76E17283668F600134B55 /* AnimalChoosingViewController.swift in Sources */,
 				D4B76DEB2836683E00134B55 /* OnBoardingViewController.swift in Sources */,
 				D4B76DE72836683E00134B55 /* AppDelegate.swift in Sources */,
+				D4967331283903F30006DA5D /* AnimalCell.swift in Sources */,
 				D4B76DE92836683E00134B55 /* SceneDelegate.swift in Sources */,
 				D4B76E1B2836766000134B55 /* AnimalsType.swift in Sources */,
 			);
@@ -309,18 +371,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D4B76DEC2836683E00134B55 /* Main.storyboard */ = {
+		D461412D2836B31D00904FC1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D4B76DED2836683E00134B55 /* Base */,
+				D461412C2836B31D00904FC1 /* en */,
+				D461413B2836B43200904FC1 /* hy-AM */,
+				D461413C2836B43500904FC1 /* ru */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		D4B76DF12836684000134B55 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D4B76DF22836684000134B55 /* Base */,
+				D46141372836B39E00904FC1 /* ru */,
+				D46141382836B3B400904FC1 /* hy-AM */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -332,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -392,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -454,7 +522,6 @@
 				INFOPLIST_FILE = Zoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +549,6 @@
 				INFOPLIST_FILE = Zoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
